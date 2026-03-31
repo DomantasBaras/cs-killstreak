@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "home": "Home",
+        "vip": "VIP",
+        "rules": "Rules",
+        "stats": "Top Players",
+        "appeals": "Ban Appeals",
+        "discord": "Discord"
+    },
+    "home": {
+        "title": "CS KillStreak",
+        "subtitle": "Classic 5v5 & GunGame | Lithuania",
+        "connect": "Connect",
+        "players_online": "Players online",
+        "current_map": "Current map",
+        "server_offline": "Server offline"
+    },
+    "vip": {
+        "title": "Get VIP",
+        "price": "5 EUR / month",
+        "perks_title": "VIP Benefits",
+        "perks": {
+            "hp": "+15 HP per kill",
+            "hs": "+30 HP per headshot",
+            "money": "Bonus money per kill",
+            "awp": "AWP access",
+            "slot": "Reserved slot",
+            "tag": "Custom [VIP] chat tag",
+            "grenades": "Extra grenades",
+            "armor": "Full armor on spawn"
+        },
+        "buy": "Buy VIP",
+        "steamid_label": "Your SteamID"
+    },
+    "rules": {
+        "title": "Server Rules"
+    },
+    "stats": {
+        "title": "Top Players",
+        "rank": "Rank",
+        "player": "Player",
+        "kills": "Kills",
+        "deaths": "Deaths",
+        "kd": "K/D",
+        "hs": "HS%"
+    },
+    "appeals": {
+        "title": "Ban Appeals",
+        "steamid": "Your SteamID",
+        "reason": "Why should you be unbanned?",
+        "submit": "Submit Appeal"
+    }
+}

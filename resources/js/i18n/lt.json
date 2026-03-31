@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "home": "Pagrindinis",
+        "vip": "VIP",
+        "rules": "Taisyklės",
+        "stats": "Geriausi žaidėjai",
+        "appeals": "Atblokavimo prašymai",
+        "discord": "Discord"
+    },
+    "home": {
+        "title": "CS KillStreak",
+        "subtitle": "Klasikinis 5v5 ir GunGame | Lietuva",
+        "connect": "Prisijungti",
+        "players_online": "Žaidėjai prisijungę",
+        "current_map": "Dabartinis žemėlapis",
+        "server_offline": "Serveris nepasiekiamas"
+    },
+    "vip": {
+        "title": "Gauti VIP",
+        "price": "5 EUR / mėnesis",
+        "perks_title": "VIP Privalumai",
+        "perks": {
+            "hp": "+15 HP už nužudymą",
+            "hs": "+30 HP už šūvį į galvą",
+            "money": "Papildomi pinigai už nužudymą",
+            "awp": "AWP prieiga",
+            "slot": "Rezervuota vieta",
+            "tag": "Individualus [VIP] žyma",
+            "grenades": "Papildomos granatos",
+            "armor": "Pilnas šarvas po atgimimo"
+        },
+        "buy": "Pirkti VIP",
+        "steamid_label": "Jūsų SteamID"
+    },
+    "rules": {
+        "title": "Serverio Taisyklės"
+    },
+    "stats": {
+        "title": "Geriausi žaidėjai",
+        "rank": "Vieta",
+        "player": "Žaidėjas",
+        "kills": "Nužudymai",
+        "deaths": "Mirtys",
+        "kd": "K/D",
+        "hs": "HS%"
+    },
+    "appeals": {
+        "title": "Atblokavimo prašymai",
+        "steamid": "Jūsų SteamID",
+        "reason": "Kodėl turėtumėte būti atblokuotas?",
+        "submit": "Pateikti prašymą"
+    }
+}
