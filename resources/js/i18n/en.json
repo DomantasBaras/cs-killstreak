@@ -9,7 +9,7 @@
     },
     "home": {
         "title": "CS KillStreak",
-        "subtitle": "Classic 5v5 & GunGame | Lithuania",
+        "subtitle": "Classic & GunGame | Lithuania",
         "connect": "Connect",
         "players_online": "Players online",
         "current_map": "Current map",
@@ -30,7 +30,18 @@
             "armor": "Full armor on spawn"
         },
         "buy": "Buy VIP",
-        "steamid_label": "Your SteamID"
+        "steamid_label": "Your SteamID",
+        "subtitle": "Get reserved slot, extra HP, AWP access and more",
+        "recurring": "Renews monthly, cancel anytime",
+        "email_label": "Your email",
+        "steamid_help": "Type status in CS console to find your SteamID",
+        "buy_button": "Pay with Card",
+        "processing": "Redirecting...",
+        "stripe_note": "Secure payment via Stripe",
+        "error_fields": "Please fill in all fields",
+        "error_generic": "Something went wrong, try again",
+        "success_title": "VIP Activated!",
+        "success_msg": "Your VIP has been activated. Reconnect to the server to see your perks."
     },
     "rules": {
         "title": "Server Rules"

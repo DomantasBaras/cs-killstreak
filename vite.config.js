@@ -1,11 +1,14 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
 
 export default defineConfig({
     plugins: [
+        tailwindcss(),
         laravel({
-            input: ['resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
         vue({
@@ -19,7 +22,15 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@': '/resources/js',
+            '@': path.resolve(__dirname, 'resources/js'),
         },
     },
+    server: {
+        proxy: {
+            '/api': {
+                target: 'http://127.0.0.1:8000',
+                changeOrigin: true,
+            }
+        }
+    }
 })

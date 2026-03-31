@@ -9,7 +9,7 @@
     },
     "home": {
         "title": "CS KillStreak",
-        "subtitle": "Klasikinis 5v5 ir GunGame | Lietuva",
+        "subtitle": "Klasikinis & GunGame | Lietuva",
         "connect": "Prisijungti",
         "players_online": "Žaidėjai prisijungę",
         "current_map": "Dabartinis žemėlapis",
@@ -30,7 +30,19 @@
             "armor": "Pilnas šarvas po atgimimo"
         },
         "buy": "Pirkti VIP",
-        "steamid_label": "Jūsų SteamID"
+        "steamid_label": "Jūsų SteamID",
+        "subtitle": "Gauk rezervuotą vietą, papildomą HP, AWP prieigą ir daugiau",
+        "recurring": "Atsinaujina kas mėnesį, galima atšaukti bet kada",
+        "email_label": "Jūsų el. paštas",
+        "steamid_help": "CS konsolėje parašyk status kad rasti savo SteamID",
+        "buy_button": "Mokėti kortele",
+        "processing": "Nukreipiama...",
+        "stripe_note": "Saugus mokėjimas per Stripe",
+        "error_fields": "Prašome užpildyti visus laukus",
+        "error_generic": "Kažkas nutiko, bandykite dar kartą",
+        "success_title": "VIP Aktyvuotas!",
+        "success_msg": "Jūsų VIP aktyvuotas. Prisijunkite prie serverio iš naujo."
+
     },
     "rules": {
         "title": "Serverio Taisyklės"
