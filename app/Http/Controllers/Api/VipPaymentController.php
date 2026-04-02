@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
 use Stripe\Webhook;
-
+use Illuminate\Support\Facades\Log;
 class VipPaymentController extends Controller
 {
     public function createCheckout(Request $request)
@@ -58,17 +58,9 @@ class VipPaymentController extends Controller
         if ($event->type === 'checkout.session.completed') {
             $session = $event->data->object;
             
-            \Log::info('RAW webhook metadata: ' . json_encode($session->metadata));
-            \Log::info('RAW webhook customer email: ' . $session->customer_email);
+            $steamId = $session->metadata->steam_id ?? null;
             
-            $fullSession = \Stripe\Checkout\Session::retrieve([
-                'id' => $session->id,
-                'expand' => ['metadata'],
-            ]);
-            
-            $steamId = $fullSession->metadata->steam_id ?? null;
-            
-            \Log::info('VIP activation SteamID: ' . ($steamId ?? 'NULL'));
+            Log::info('VIP activation SteamID: ' . ($steamId ?? 'NULL'));
             
             if ($steamId) {
                 app(VipService::class)->activate($steamId);

@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Log;
+
 class VipService
 {
     protected string $usersIni;
@@ -13,13 +15,13 @@ class VipService
 
     public function activate(string $steamId): void
     {
-        \Log::info('VIP activate called with SteamID: ' . $steamId);
+        Log::info('VIP activate called with SteamID: ' . $steamId);
         
         $this->removeFromFile($steamId);
         $line = "\"{$steamId}\" \"\" \"t\" \"ce\"\n";
         file_put_contents($this->usersIni, $line, FILE_APPEND);
 
-        \Log::info('VIP written to users.ini: ' . $line);
+        Log::info('VIP written to users.ini: ' . $line);
 
         $this->reloadAdmins();
     }
@@ -46,7 +48,7 @@ class VipService
     {
         // When on VPS, this will RCON the server to reload admins
         // For now logs the action
-        \Log::info("VIP admins reload triggered");
+        Log::info("VIP admins reload triggered");
 
         // Uncomment when on VPS with RCON configured:
         // $rcon = new \Rcon(env('CS_SERVER_IP'), env('CS_SERVER_PORT'), env('CS_SERVER_RCON'), 3);
