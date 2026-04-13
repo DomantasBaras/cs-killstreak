@@ -9,7 +9,7 @@ class ServerStatusController extends Controller
 {
     public function index()
     {
-        $ip   = env('CS_SERVER_IP', '127.0.0.1');
+        $ip   = env('CS_SERVER_IP', '38.210.227.192');
         $port = env('CS_SERVER_PORT', 27015);
 
         $query = new SourceQuery();

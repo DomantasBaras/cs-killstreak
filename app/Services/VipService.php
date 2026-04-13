@@ -18,8 +18,9 @@ class VipService
         Log::info('VIP activate called with SteamID: ' . $steamId);
         
         $this->removeFromFile($steamId);
-        $line = "\"{$steamId}\" \"\" \"t\" \"ce\"\n";
-        file_put_contents($this->usersIni, $line, FILE_APPEND);
+        $expiry = now()->addMonth()->format('d.m.y');
+        $line = "\"{$steamId}\" \"\" \"abcdefghijklmnopqrstuvwxyz\" \"a\" \"{$expiry}\"\n";
+        file_put_contents($this->vipsIni, $line, FILE_APPEND);
 
         Log::info('VIP written to users.ini: ' . $line);
 
