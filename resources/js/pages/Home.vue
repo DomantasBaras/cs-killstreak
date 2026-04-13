@@ -68,7 +68,7 @@ const { t } = useI18n()
 const status = ref(null)
 const loading = ref(true)
 const copied = ref(false)
-const serverIp = '127.0.0.1:27015' // update with real IP later
+const serverIp = '38.210.227.192:27015' // update with real IP later
 
 async function fetchStatus() {
   try {

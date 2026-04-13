@@ -52,8 +52,8 @@ class VipService
         Log::info("VIP admins reload triggered");
 
         // Uncomment when on VPS with RCON configured:
-        // $rcon = new \Rcon(env('CS_SERVER_IP'), env('CS_SERVER_PORT'), env('CS_SERVER_RCON'), 3);
-        // $rcon->connect();
-        // $rcon->sendCommand('amxx_reloadadmins');
+        $rcon = new \Rcon(env('CS_SERVER_IP'), env('CS_SERVER_PORT'), env('CS_SERVER_RCON'), 3);
+        $rcon->connect();
+        $rcon->sendCommand('amxx_reloadadmins');
     }
 }
