@@ -26,10 +26,11 @@
           <textarea v-model="form.reason" rows="4"
             class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500"></textarea>
         </div>
+        <p v-if="error" class="text-red-400 text-sm mb-4">{{ error }}</p>
         <button @click="submit"
-          :disabled="!form.name || !form.reason"
+          :disabled="!form.name || !form.reason || loading"
           class="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-40 text-white font-bold py-3 rounded-lg transition-colors">
-          Submit Appeal
+          {{ loading ? 'Submitting…' : 'Submit Appeal' }}
         </button>
       </div>
     </div>
@@ -39,10 +40,30 @@
 <script setup>
 import { ref } from 'vue'
 const submitted = ref(false)
+const loading = ref(false)
+const error = ref(null)
 const form = ref({ name: '', steamid: '', reason: '' })
-function submit() {
+
+async function submit() {
   if (!form.value.name || !form.value.reason) return
-  // TODO: POST to /api/appeals
-  submitted.value = true
+  loading.value = true
+  error.value = null
+  try {
+    const res = await fetch('/api/appeals', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(form.value),
+    })
+    if (!res.ok) {
+      const data = await res.json()
+      error.value = data.message || 'Something went wrong.'
+      return
+    }
+    submitted.value = true
+  } catch {
+    error.value = 'Network error. Please try again.'
+  } finally {
+    loading.value = false
+  }
 }
 </script>
