@@ -12,6 +12,11 @@
       <p v-if="copied" class="text-green-400 text-sm mt-2">IP copied!</p>
     </div>
 
+    <!-- Vote banner -->
+    <div class="flex justify-center mb-10">
+      <VoteBanner />
+    </div>
+
     <!-- Server status cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center">
@@ -63,13 +68,13 @@
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import axios from 'axios'
+import VoteBanner from '@/components/VoteBanner.vue'
 
 const { t } = useI18n()
 const status = ref(null)
 const loading = ref(true)
 const copied = ref(false)
 const serverIp = '38.210.227.192:27015' // update with real IP later
-
 async function fetchStatus() {
   try {
     const res = await axios.get('/api/server/status')
