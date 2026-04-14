@@ -9,7 +9,7 @@
         class="vote-link"
       >
         <img
-          src="/vote-button/counter2"
+          src="/vote-counter2.png"
           alt="cs-servers.lt"
           title="Balsuok!"
           border="0"
@@ -24,7 +24,7 @@
         class="vote-link"
       >
         <img
-          src="/vote-button/button"
+          src="/vote-button.png"
           alt="cs-servers.lt"
           title="Balsuok!"
           border="0"
