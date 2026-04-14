@@ -15,6 +15,12 @@
     </div>
 
     <div v-else>
+      <div v-if="stats.total === 0" class="empty-state">
+        <p>Kol kas statistikos nėra. Prisijunk prie serverio ir pradėk žaisti!</p>
+        <code>38.210.227.192:27015</code>
+      </div>
+
+      <div v-else>
       <div class="table-wrapper">
         <table class="stats-table">
           <thead>
@@ -73,14 +79,15 @@
       </div>
 
       <p class="total-count">Iš viso žaidėjų: <strong>{{ stats.total }}</strong></p>
-    </div>
+      </div><!-- end v-else (has data) -->
+    </div><!-- end outer v-else -->
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
-const stats = ref({ data: [], current_page: 1, last_page: 1, total: 0 })
+const stats = ref({ data: [], current_page: 1, last_page: 1, total: 0, per_page: 25 })
 const loading = ref(true)
 const error = ref(null)
 
@@ -285,6 +292,19 @@ onMounted(() => fetchStats())
 .page-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+.empty-state code {
+  display: block;
+  margin-top: 0.5rem;
+  color: #e8c84a;
+  font-size: 1.1rem;
 }
 
 .total-count {
