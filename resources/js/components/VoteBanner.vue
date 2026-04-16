@@ -3,7 +3,7 @@
     <p class="vote-label">Balsuok už mūsų serverį!</p>
     <div class="vote-buttons">
       <a
-        href="http://www.cs-servers.lt/vote.php?sid=99318"
+        href="http://www.cs-servers.lt/vote.php?sid=99319"
         target="_blank"
         title="Balsuok už CS KillStreak!"
         class="vote-link"
@@ -18,7 +18,7 @@
         />
       </a>
       <a
-        href="http://www.cs-servers.lt/vote.php?sid=99318"
+        href="http://www.cs-servers.lt/vote.php?sid=99319"
         target="_blank"
         title="Balsuok už CS KillStreak!"
         class="vote-link"
