@@ -3,7 +3,7 @@
     <div class="text-center py-16">
       <h1 class="text-5xl font-bold text-white mb-3">Discord</h1>
       <p class="text-gray-400 text-lg mb-8">Join the community — chat, get VIP, report players.</p>
-      <a href="https://discord.gg/YOURCODE" target="_blank"
+      <a href="https://discord.gg/G8TEymvh" target="_blank"
         class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-3 rounded-lg text-lg transition-colors inline-block">
         Join Discord Server
       </a>
